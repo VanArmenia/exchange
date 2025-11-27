@@ -18,7 +18,7 @@ export default function App() {
   useEffect(() => {
     async function fetchRates() {
       try {
-        const response = await fetch('http://localhost:4000/api/rates');
+        const response = await fetch('/api/rates');
         const text = await response.text();
         const parsed = parseCnbData(text);
         setRates(parsed);
