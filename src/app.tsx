@@ -99,7 +99,7 @@ export default function App() {
         </select>
 
         <div className="pt-2 text-xl font-medium">
-          Result: {convert()} {selectedCurrency}
+          Result: {Number(convert()) || 0} {selectedCurrency}
         </div>
       </div>
     </div>

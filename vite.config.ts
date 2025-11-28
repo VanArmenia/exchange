@@ -12,4 +12,12 @@ export default defineConfig({
       reporter: ['text', 'json', 'html'],
     },
   },
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://exchange-omega-two.vercel.app",
+        changeOrigin: true,
+      },
+    },
+  },
 });
